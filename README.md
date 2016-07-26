@@ -1,7 +1,15 @@
 eelbot
 ======
 
+I NO LONGER DEVELOP THIS
+========================
+
 Minimalist "snake" bots for testing Minecraft servers. Program works as a proxy. When you are joining, the proxy connects specified amount of bots to server. You are controlling all of them at once in standard Minecraft client.
+
+Supported versions
+------------------
+
+1.7.2-1.7.10
 
 Compiling
 ---------
@@ -33,9 +41,3 @@ Example: 30 bots, timeout between bots actions = 200ms, proxy on `0.0.0.0:25588`
 ```
 
 Then join from Minecraft client to `0.0.0.0:25588`. Eelbot will connect bots to target server.
-
-Todo
-----
-
-* entity id translator
-* changing nicknames?

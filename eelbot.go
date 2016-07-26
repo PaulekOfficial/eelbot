@@ -1,19 +1,3 @@
-/*
-   Copyright 2014 TeapotDev
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-*/
-
 package main
 
 import "flag"
@@ -29,7 +13,7 @@ import "io"
 import "sync"
 
 func main() {
-	fmt.Println("*** eelbot by TeapotDev (Minecraft 1.7.2-1.7.5) ***")
+	fmt.Println("*** eelbot by TeapotDev (Minecraft 1.7.x) ***")
 	proxy := flag.String("proxy", "127.0.0.1:25588", "proxy address (client is connecting to it)")
 	target := flag.String("target", "127.0.0.1:25565", "target server address")
 	count := flag.Int("count", 10, "amount of bots to be connected")
@@ -104,7 +88,7 @@ func main() {
 
 	// S->C Login success
 	writeVarInt(packetbuf, 0x02)
-	writeVarString(packetbuf, "eel")
+	writeVarString(packetbuf, "069a79f4-44e9-4726-a5be-fca90e38aaf5")
 	writeVarString(packetbuf, "eel")
 	if err = writePacketBuf(writer, packetbuf); err != nil {
 		fmt.Println("## Error sending to client: " + err.Error())
